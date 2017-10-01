@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+        var oData = {
+                "names": [{
+                    icon: "sap-icon://sap-ui5",
+                    Name: "Dinosaurs",
+                    Place: "Mountain"
+                }, {
+                    icon: "sap-icon://general-leave-request",
+                    Name: "Elephant",
+                    Place: "Forest"
+                }, {
+                    icon: "sap-icon://map-2",
+                    Name: "Whale",
+                    Place: "Sea"
+                }, {
+                    icon: "sap-icon://travel-expense",
+                    Name: "Duck",
+                    Place: "Water"
+                }]
+            };
+        
+        var oModel = new sap.ui.model.json.JSONModel(oData);
+        sap.ui.getCore().setModel(oModel);
+        
+
+        var oTileTemp = new sap.m.StandardTile({
+        	icon:"{icon}",
+        	title:"{Name}",
+        	info:"{Place}"
+        });
+                
+        
+        var oTileCont = new sap.m.TileContainer({
+        	//tiles : [ oT1, oT2, oT3, oT4 ]
+        	
+        });
+        
+        oTileCont.bindAggregation("tiles","/names",oTileTemp);
+        
+
+        var oPage = new sap.m.Page({
+			title:"List Page",
+			content: [ oTileCont ]
+		});
+		
+		var oApp = new sap.m.App({
+			pages:[oPage]
+		}).placeAt("content");
+
+		
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.commons"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+		var oSimpleForm = new sap.ui.layout.form.SimpleForm({
+			
+			content: [
+			          new sap.m.Label({
+			        	  text:"Simple Form"
+			          }),
+			          
+			          new sap.m.Input({
+			        	  placeholder: "Simple Input"
+			          }),
+			          
+			          new sap.m.Button({
+			        	  text:"Press me"
+			          }),
+			          
+			          new sap.m.RatingIndicator({
+			        	  value:4.7
+			          }),
+			          
+			          new sap.m.TextArea({
+			        	  value:"Awsome text area"
+			          }),
+			          
+			          new sap.m.DatePicker({ 
+			        	  
+			          }),
+			          
+			          new sap.ui.unified.FileUploader({}),
+			          
+			          new sap.m.Bar({
+			        	  contentRight:[
+			        	        new sap.m.Button({
+			        	        	text:"Right side"
+			        	        })
+			        	        
+			        	  ]
+			          }),
+			          
+			          new sap.m.VBox({
+			        	  items:[
+			        	     new sap.m.Button({
+			        	    	 text:"VBox Btn1"
+			        	     }), 
+			        	     new sap.m.Button({
+			        	    	 text:"VBox Btn2"
+			        	     }),    
+			        	  ]
+			          }),
+			          
+			          new sap.m.HBox({
+			        	  items:[
+				        	     new sap.m.Button({
+				        	    	 text:"HBox Btn1"
+				        	     }), 
+				        	     new sap.m.Button({
+				        	    	 text:"HBox Btn2"
+				        	     }),    
+				        	  ]
+			          })
+
+			          ]
+
+		});
+			oSimpleForm.placeAt("content");
+		
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
