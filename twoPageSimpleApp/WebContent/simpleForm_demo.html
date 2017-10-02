@@ -4,6 +4,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
 
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
 		<script src="resources/sap-ui-core.js"
 				id="sap-ui-bootstrap"
 				data-sap-ui-libs="sap.m,sap.ui.commons"
@@ -29,7 +31,7 @@
 			          
 			          new sap.m.RatingIndicator({
 			        	  value:4.7
-			          }),
+			          }).addStyleClass("ratingForm"),
 			          
 			          new sap.m.TextArea({
 			        	  value:"Awsome text area"
@@ -59,23 +61,25 @@
 			        	    	 text:"VBox Btn2"
 			        	     }),    
 			        	  ]
-			          }),
+			          }).addStyleClass("vBoxForm"),
 			          
 			          new sap.m.HBox({
 			        	  items:[
 				        	     new sap.m.Button({
-				        	    	 text:"HBox Btn1"
+				        	    	 text:"HBox Btn1",
+				        	    	 type:"Emphasized"
 				        	     }), 
 				        	     new sap.m.Button({
-				        	    	 text:"HBox Btn2"
+				        	    	 text:"HBox Btn2",
+				        	    	 type:"Accept"
 				        	     }),    
 				        	  ]
-			          })
+			          }).addStyleClass("hBoxForm")
 
 			          ]
 
-		});
-			oSimpleForm.placeAt("content");
+		}).addStyleClass("newForm");
+		oSimpleForm.placeAt("content");
 		
 		</script>
 

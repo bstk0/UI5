@@ -1,36 +1,34 @@
-sap.ui.jsview("twopagesimpleapp.first", {
+sap.ui.jsview("eventsdemo1.secondPage", {
 
 	/** Specifies the Controller belonging to this View. 
 	* In the case that it is not implemented, or that "null" is returned, this View does not have a Controller.
-	* @memberOf twopagesimpleapp.first
+	* @memberOf eventsdemo1.secondPage
 	*/ 
 	getControllerName : function() {
-		return "twopagesimpleapp.first";
+		return "eventsdemo1.secondPage";
 	},
 
 	/** Is initially called once after the Controller has been instantiated. It is the place where the UI is constructed. 
 	* Since the Controller is given to this method, its event handlers can be attached right away. 
-	* @memberOf twopagesimpleapp.first
+	* @memberOf eventsdemo1.secondPage
 	*/ 
 	createContent : function(oController) {
-		var oSimpleInput = new sap.m.Input({
-			liveChange:[oController.liveChange,oController],
-			id : "idInput",
-			placeholder : "Enter Name"
-		}).addStyleClass("inputCss");
 		
-		var oSimpleButton = new sap.m.Button({
-			text : "Submit",
-			press: [oController.goToSecondPage,oController]	
-		}).addStyleClass("btnCss");
+		var oLabel = new sap.m.Label({
+			text:"{label>/data}"
+		});
 		
 		var oPage = new sap.m.Page({
-			title: "Simple App",
+			title: "Second Page",
+			showNavButton:true,
+			navButtonPress:function() {
+				app.back();
+			},
 			content: [
-			          oSimpleInput,
-			          oSimpleButton
+			          oLabel      	
 			]
 		});
+		
 		return oPage;
 	}
 

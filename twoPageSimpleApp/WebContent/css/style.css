@@ -1,0 +1,85 @@
+/*
+.newForm {
+	width: 70% !important;
+	padding-left : 30% !important;
+	padding-top: 10% !important;
+}
+
+.vBoxForm{
+	padding-left : 18%;
+}
+
+.hBoxForm{
+	
+}
+
+.sapUiRFLContainer {
+	width: 100% !important;
+}
+*/
+
+.newForm {
+    width: 70%;
+    padding-left: 30% !important;
+    padding-top: 20px !important;
+}
+
+.sapUiFormElementLbl {
+    min-width: 188px;
+    width: 50% !Important;
+}
+
+.labelForm {}
+
+.inputForm {}
+
+.btnForm {}
+
+.ratingForm {
+	padding-left: 40% !important;
+}
+
+.textAreaForm {}
+
+.fileUploadForm {}
+
+.barForm {}
+
+.hBoxForm {
+    padding-left: 30%;
+}
+
+.vBoxForm {
+    padding-left: 40%;
+}
+
+.sapUiRFLRow {
+    padding-left: 0 1rem;
+    padding-right: 0.1rem;
+}
+
+.sapUiRFLContainer {
+    width: 100% !important;
+}
+
+.sapUiFormResLayout {
+    margin-right: 30%;
+}
+/*
+.sapUiFormResLayout {
+    padding: 0rem !Important;
+}
+*/
+@media screen and (max-width: 600px){
+    .hBoxForm {
+        padding-left: 0%;
+    }
+    .vBoxForm {
+        padding-left: 0%;
+    }
+    .sapMBtn{
+        width:5rem;
+        padding-right: 0.3rem;
+        padding-left: 0.1rem;
+    }
+}
