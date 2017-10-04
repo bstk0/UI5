@@ -15,7 +15,7 @@ sap.ui.jsview("eventsdemo1.demo", {
 	createContent : function(oController) {
 		
         var oList = new sap.m.List({
-            headerText: "Animals",
+            headerText: "..Animals..",
 			itemPress:[oController.selectEventHad,oController]
 
         });
